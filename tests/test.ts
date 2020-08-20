@@ -5,11 +5,11 @@ describe("## test http2", () => {
         await got("https://google.com", {
             http2: true,
         });
-    });
+    }, 20000);
 
     it("works without http2", async () => {
         await got("https://google.com", {
             http2: false,
         });
-    });
+    }, 20000);
 });
